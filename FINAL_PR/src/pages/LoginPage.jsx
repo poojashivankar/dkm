@@ -10,32 +10,56 @@ const LoginPage = ({ setUser }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     // Validation logic...
-
-    try {
-        const { data } = await axios.post("http://localhost:5000/login", { email, password });
-
-        if (data.success) {
-            localStorage.setItem("user", JSON.stringify(data.user)); // Persist user data
-            setUser(data.user);
-
-            // Navigate based on role
-            if (data.user.role === "farmer") {
-                navigate("/FarmerDashboard");
-            } else if (data.user.role === "buyer") {
-                navigate("/Buyers");
-            } else {
-                navigate("/"); // Default fallback
-            }
-        } else {
-            alert(data.message || "Invalid credentials.");
-        }
-    } catch (error) {
-        console.error('Login error: ', error);
-        alert("An error occurred during login. Please try again.");
+  
+    // Hardcoded admin credentials
+    const adminEmail = "cdac24@gmail.com";
+    const adminPassword = "admin123";
+  
+    // Check for admin login
+    if (email === adminEmail && password === adminPassword) {
+      const adminUser = {
+        role: "admin",
+        name: "Admin",
+        email: adminEmail,
+      };
+  
+      localStorage.setItem("user", JSON.stringify(adminUser)); // Persist admin data
+      setUser(adminUser);
+  
+      navigate("/Adminmain"); // Redirect to admin dashboard
+      return;
     }
-};
+  
+    // Proceed with API call for other roles
+    try {
+      const { data } = await axios.post("http://localhost:5000/login", {
+        email,
+        password,
+      });
+  
+      if (data.success) {
+        localStorage.setItem("user", JSON.stringify(data.user)); // Persist user data
+        setUser(data.user);
+  
+        // Navigate based on role
+        if (data.user.role === "farmer") {
+          navigate("/FarmerDashboard");
+        } else if (data.user.role === "buyer") {
+          navigate("/Buyers");
+        } else {
+          navigate("/"); // Default fallback
+        }
+      } else {
+        alert(data.message || "Invalid credentials.");
+      }
+    } catch (error) {
+      console.error("Login error: ", error);
+      alert("An error occurred during login. Please try again.");
+    }
+  };
+  
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">

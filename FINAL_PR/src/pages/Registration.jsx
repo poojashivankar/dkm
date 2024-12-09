@@ -77,7 +77,7 @@ function Register() {
 </select>
 
             <input
-                type="text"
+                type="number"
                 name="mobile_no"
                 placeholder="Mobile No"
                 value={formData.mobile_no}

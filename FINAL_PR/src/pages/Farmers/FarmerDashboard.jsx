@@ -83,7 +83,7 @@ const Dashboard = () => {
   return (
     <div className="p-4 bg-gray-100 min-h-screen">
       {/* Weather Section */}
-      <section className="bg-blue-500 text-white p-4 rounded-md mb-8">
+      <section className="bg-oliveoliveGreent-white p-4 rounded-md mb-8">
         <div className="flex justify-between items-center">
           <h2 className="text-2xl font-bold">Weather Update</h2>
           <select
@@ -112,7 +112,7 @@ const Dashboard = () => {
 
       {/* Buyers Section */}
       <section className="mb-8">
-        <h2 className="text-2xl font-bold text-green-600 mb-4">Buyer Profiles</h2>
+        <h2 className="text-2xl font-bold text-oliveoliveGreen4">Buyer Profiles</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {buyers.map((buyer) => (
             <div
@@ -137,7 +137,7 @@ const Dashboard = () => {
 
       {/* Farmer Products Section */}
       <section>
-        <h2 className="text-2xl font-bold text-green-600 mb-4">Farmer Products</h2>
+        <h2 className="text-2xl font-bold text-oliveGreen mb-4">Farmer Products</h2>
         <div className="space-y-8">
           {Object.keys(products).map((category) => (
             <div key={category}>

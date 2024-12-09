@@ -151,19 +151,6 @@ const ProductDetails = () => {
           )}
         </div>
       </div>
-
-      {/* Footer */}
-      <footer
-        style={{
-          backgroundColor: "#28a745",
-          padding: "10px",
-          color: "white",
-          textAlign: "center",
-          marginTop: "20px",
-        }}
-      >
-        <p>&copy; 2024 Digital Kisan Market</p>
-      </footer>
     </div>
   );
 };

@@ -17,8 +17,8 @@ const AgricultureSection = () => {
 
       {/* Right Section: Content */}
       <div className="lg:w-1/2 mt-6 lg:mt-0 lg:ml-10">
-        <h2 className="mb-4 sec-title__title text-forestGreen">
-        We’re Leader in Agriculture
+        <h2 className="text-4xl font-bold text-forestGreen mb-4">
+        We are Leader in Agriculture
         Market
         </h2>
         <p className="text-gray-700 mb-4">

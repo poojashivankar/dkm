@@ -52,12 +52,14 @@ const GoogleTranslatePage = () => {
   };
 
   return (
+    <div className="gtrs">
     <div
-      className="fixed z-40 bg-green-400 p-2 rounded-md shadow-lg cursor-move"
+      className="z-40 bg-goldenYellow p-2 rounded-md shadow-lg cursor-move ggltranslate"
       style={{ top: position.top, left: position.left }}
       onMouseDown={handleMouseDown}
     >
       <div id="google_translate_element" className="text-white text-sm"></div>
+    </div>
     </div>
   );
 };

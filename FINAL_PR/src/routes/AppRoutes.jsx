@@ -6,13 +6,21 @@ import LoginPage from "../pages/LoginPage";
 import FarmerDashboard from "../pages/Farmers/FarmerDashboard";
 import BuyersPage from "../pages/Buyers/BuyersPage";
 import Adminmain from "../pages/Admin/adminmain";
-
+import AboutUs from "../pages/Aboutus";
+import ContactForm from "../pages/ContactUs";
+import FarmingNews from "../components/FarmingNews";
+import AddProduct from "../pages/Farmers/AddProduct";
 const AppRoutes = ({ user, setUser }) => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/contact" element={<ContactForm />} />
+      <Route path="/news" element={<FarmingNews />} />
+      <Route path="/farmersadd" element={<AddProduct />} />
       <Route path="/login" element={<LoginPage setUser={setUser} />} />
+      
       <Route
         path="/FarmerDashboard"
         element={

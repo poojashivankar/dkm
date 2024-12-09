@@ -43,69 +43,7 @@ const BuyersPage = () => {
   return (
     <div style={{ fontFamily: "Arial, sans-serif" }}>
       {/* Header */}
-      <header
-        style={{
-          backgroundColor: "#28a745",
-          padding: "10px",
-          color: "white",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <h1 style={{ margin: 0, fontSize: "24px" }}>Digital Kisan Market</h1>
-        <nav style={{ display: "flex", gap: "10px" }}>
-          <button
-            onClick={handleDashboard} // Navigate to dashboard
-            style={{
-              background: "none",
-              border: "none",
-              color: "white",
-              cursor: "pointer",
-              fontSize: "16px",
-            }}
-          >
-            Dashboard
-          </button>
-          <button
-            onClick={() => navigate("/news")}
-            style={{
-              background: "none",
-              border: "none",
-              color: "white",
-              cursor: "pointer",
-              fontSize: "16px",
-            }}
-          >
-            News
-          </button>
-          <button
-            onClick={() => navigate("/order-details")}
-            style={{
-              background: "none",
-              border: "none",
-              color: "white",
-              cursor: "pointer",
-              fontSize: "16px",
-            }}
-          >
-            Order Details
-          </button>
-          <a
-            href="/contact"
-            style={{ color: "white", textDecoration: "none", fontSize: "16px" }}
-          >
-            Contact Us
-          </a>
-          <a
-            href="/about"
-            style={{ color: "white", textDecoration: "none", fontSize: "16px" }}
-          >
-            About
-          </a>
-        </nav>
-      </header>
-
+    
       {/* Main Content */}
       <main
         style={{
@@ -114,7 +52,7 @@ const BuyersPage = () => {
           minHeight: "60vh",
         }}
       >
-        <h2 style={{ color: "#28a745", textAlign: "center" }}>
+        <h2 style={{ color: "#6d8c54", textAlign: "center" }}>
           Welcome, Buyer!
         </h2>
         <p style={{ textAlign: "center" }}>
@@ -160,7 +98,7 @@ const BuyersPage = () => {
                   onClick={() => handleViewDetails(item.id)} // Navigate to product details
                   style={{
                     padding: "10px 20px",
-                    backgroundColor: "#28a745",
+                    backgroundColor: "#6d8c54",
                     color: "white",
                     border: "none",
                     borderRadius: "5px",
@@ -174,30 +112,6 @@ const BuyersPage = () => {
           ))}
         </div>
       </main>
-
-      {/* Footer */}
-      <footer
-        style={{
-          backgroundColor: "#28a745",
-          padding: "10px",
-          color: "white",
-          textAlign: "center",
-        }}
-      >
-        <p>&copy; 2024 Digital Kisan Market</p>
-        <a
-          href="/terms"
-          style={{ color: "white", margin: "0 10px", textDecoration: "none" }}
-        >
-          Terms & Conditions
-        </a>
-        <a
-          href="/privacy"
-          style={{ color: "white", margin: "0 10px", textDecoration: "none" }}
-        >
-          Privacy Policy
-        </a>
-      </footer>
     </div>
   );
 };

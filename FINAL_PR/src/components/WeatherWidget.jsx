@@ -37,7 +37,7 @@ const WeatherWidget = () => {
   }, [location]);
 
   return (
-    <section className="bg-blue-500 text-white p-4 rounded-md mb-8">
+    <section className="bg-oliveGreen text-white p-4 rounded-md mb-8">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold">Weather Update</h2>
         <select

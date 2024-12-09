@@ -1,9 +1,22 @@
 
 
 h2.slider-heading {
-    font-family: cursive;
-    font-size: 50px;
-  }
-  .section-2-rw{
-    background-color: #f1cf69;
-  }
+  font-family: cursive;
+  font-size: 50px;
+}
+.section-2-rw{
+  background-color: #f1cf69;
+}
+div#\:0\.targetLanguage {
+  height: 50px;
+}
+
+  .ggltranslate {
+    height: 70px;
+    position: absolute;
+    top: 100px !important;
+    left: 2% !important;
+}
+.desc-cnt{
+  margin-left:30px;
+}

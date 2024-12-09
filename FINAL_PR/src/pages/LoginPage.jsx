@@ -74,14 +74,14 @@ const LoginPage = ({ setUser }) => {
           </div>
           {errors.form && <p className="text-red-500 text-sm mb-4">{errors.form}</p>}
           <div className="flex justify-center">
-            <button type="submit" className="w-full py-3 bg-green-500 text-white font-semibold rounded-md hover:bg-green-600 transition-all duration-300">
+            <button type="submit" className="w-full py-3 bg-oliveGreen text-white font-semibold rounded-md hover:bg-forestGreen transition-all duration-300">
               Login
             </button>
           </div>
         </form>
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
-            Don't have an account? <a href="/register" className="text-green-500 font-semibold hover:text-green-700">Sign up</a>
+            Don't have an account? <a href="/register" className="text-oliveGreen font-semibold hover:text-oliveGreen-700">Sign up</a>
           </p>
         </div>
       </div>
